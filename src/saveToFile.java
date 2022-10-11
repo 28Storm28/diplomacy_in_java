@@ -16,11 +16,8 @@ public class saveToFile{
             ObjectInputStream ois = new ObjectInputStream(fis);
             stateHandler ret = (stateHandler) ois.readObject();
             return ret;
-        }catch (IOException ex){
+        }catch (IOException | ClassNotFoundException ex){
             ex.printStackTrace();
-            return null;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
             return null;
         }
     }

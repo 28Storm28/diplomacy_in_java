@@ -2,6 +2,7 @@ import java.io.Serializable;
 import java.util.List;
 
 public class province implements Serializable {
+
     int id;
     List<Integer> borders;
     int type; //0: in land, 1: costal, 2:Ocean
